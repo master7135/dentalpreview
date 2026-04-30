@@ -1,0 +1,20 @@
+<svg width="520" height="120" viewBox="0 0 520 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="120" rx="28" fill="#182126"/>
+  <text x="28" y="78" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700">
+    <tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">o</tspan><tspan fill="#FBBC05">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan>
+  </text>
+  <text x="225" y="78" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="600">Reviews</text>
+  <g transform="translate(226 90)">
+    <path d="M10 0L12.7 7.1L20 7.7L14.4 12.4L16.2 19.5L10 15.4L3.8 19.5L5.6 12.4L0 7.7L7.3 7.1L10 0Z" fill="#FBBC05"/>
+    <path d="M34 0L36.7 7.1L44 7.7L38.4 12.4L40.2 19.5L34 15.4L27.8 19.5L29.6 12.4L24 7.7L31.3 7.1L34 0Z" fill="#FBBC05"/>
+    <path d="M58 0L60.7 7.1L68 7.7L62.4 12.4L64.2 19.5L58 15.4L51.8 19.5L53.6 12.4L48 7.7L55.3 7.1L58 0Z" fill="#FBBC05"/>
+    <path d="M82 0L84.7 7.1L92 7.7L86.4 12.4L88.2 19.5L82 15.4L75.8 19.5L77.6 12.4L72 7.7L79.3 7.1L82 0Z" fill="#FBBC05"/>
+    <path d="M106 0L108.7 7.1L116 7.7L110.4 12.4L112.2 19.5L106 15.4L99.8 19.5L101.6 12.4L96 7.7L103.3 7.1L106 0Z" fill="#FBBC05" fill-opacity="0.45"/>
+    <path d="M106 0L108.7 7.1L116 7.7L110.4 12.4L112.2 19.5L106 15.4L99.8 19.5L101.6 12.4L96 7.7L103.3 7.1L106 0Z" fill="#FBBC05" clip-path="url(#halfStar)"/>
+  </g>
+  <defs>
+    <clipPath id="halfStar">
+      <rect x="96" y="0" width="10" height="20" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Muskaan Dental</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="login-container" class="auth-container">
+        <div class="auth-box">
+            <h2><i class="fa-solid fa-user-lock"></i> Staff Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" id="login-username" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <div id="login-error" class="error-msg"></div>
+            </form>
+        </div>
+    </div>
+
+    <div id="dashboard-container" class="dashboard-container hidden">
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="fa-solid fa-tooth"></i>
+                <span>Admin Panel</span>
+            </div>
+            <nav class="side-nav">
+                <a href="#" class="active" data-tab="appointments"><i class="fa-solid fa-calendar-check"></i> Appointments</a>
+                <a href="#" data-tab="availability"><i class="fa-solid fa-clock"></i> Manage Availability</a>
+                <a href="#" data-tab="users"><i class="fa-solid fa-user-plus"></i> Manage Users</a>
+                <a href="#" id="logout-btn"><i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- Appointments Tab -->
+            <section id="tab-appointments" class="tab-content active">
+                <h2>Appointments</h2>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Date & Time</th>
+                                <th>Patient Name</th>
+                                <th>Phone</th>
+                                <th>Service</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="appointments-tbody">
+                            <!-- Populated via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Availability Tab -->
+            <section id="tab-availability" class="tab-content hidden">
+                <h2>Manage Availability</h2>
+                <div class="availability-manager">
+                    <div class="date-selector">
+                        <label>Select Date:</label>
+                        <input type="date" id="avail-date">
+                        <button id="load-avail-btn" class="btn btn-secondary">Load Slots</button>
+                    </div>
+                    
+                    <div id="slots-container" class="slots-container hidden">
+                        <h3>Available Time Slots for <span id="current-avail-date"></span></h3>
+                        <p class="text-muted">Check the boxes to make these times available for booking.</p>
+                        <form id="slots-form" class="slots-grid">
+                            <!-- Checkboxes populated via JS -->
+                        </form>
+                        <button id="save-avail-btn" class="btn btn-primary mt-3">Save Availability</button>
+                        <div id="avail-msg" class="success-msg"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Users Tab -->
+            <section id="tab-users" class="tab-content hidden">
+                <h2>Add New Staff User</h2>
+                <div class="auth-box add-user-box">
+                    <form id="add-user-form">
+                        <div class="form-group">
+                            <label>New Username</label>
+                            <input type="text" id="new-username" required>
+                        </div>
+                        <div class="form-group">
+                            <label>New Password</label>
+                            <input type="password" id="new-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add User</button>
+                        <div id="user-msg"></div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
